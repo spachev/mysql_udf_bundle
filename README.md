@@ -12,6 +12,10 @@ In MySQL as root:
 
 create function earth_distance returns real soname 'libearth_distance.so';
 
+Usage:
+
+earth_distance(lat1,lon1,lat2,lon2)
+
 Usage examples:
 
 select earth_distance(40.0,-111.0,41.0,-112);
