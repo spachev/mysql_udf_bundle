@@ -3,21 +3,28 @@ Random collection of MySQL UDFs
 
 To install (assuming Ubuntu and the likes):
 
+```
 apt-get install libmysqlclient-dev g++
 cmake
 make
 sudo make install
+```
 
 In MySQL as root:
 
+```
 create function earth_distance returns real soname 'libearth_distance.so';
+```
 
 Usage:
 
+```
 earth_distance(lat1,lon1,lat2,lon2)
+```
 
 Usage examples:
 
+```
 select earth_distance(40.0,-111.0,41.0,-112);
 +---------------------------------------+
 | earth_distance(40.0,-111.0,41.0,-112) |
@@ -41,3 +48,4 @@ select earth_distance(40.0,-111.0,41.0,"-112");
 |                                   86.90 |
 +-----------------------------------------+
 1 row in set (0.01 sec)
+```
