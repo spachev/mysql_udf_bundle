@@ -15,6 +15,7 @@ In MySQL as root:
 ```
 create function earth_distance returns real soname 'libearth_distance.so';
 create function write_to_file returns int soname 'libwrite_to_file.so';
+create function hello returns string soname 'libhello.so';
 ```
 
 Usage:
@@ -22,6 +23,7 @@ Usage:
 ```
 earth_distance(lat1,lon1,lat2,lon2)
 write_to_file(fname,fdata);
+hello();
 ```
 
 Usage examples:
