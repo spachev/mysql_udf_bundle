@@ -16,7 +16,8 @@ In MySQL as root:
 create function earth_distance returns real soname 'libearth_distance.so';
 create function write_to_file returns int soname 'libwrite_to_file.so';
 create function hello returns string soname 'libhello.so';
-create function word_count returns int soname 'libword_count.so'```
+create function word_count returns int soname 'libword_count.so'
+```
 
 Usage:
 
