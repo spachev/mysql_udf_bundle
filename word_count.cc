@@ -45,5 +45,6 @@ longlong word_count(UDF_INIT* initid, UDF_ARGS* args, char* is_null, char* error
 		prev_was_wchar = cur_is_wchar;
 	}
 
+	*is_null = 0;
 	return n_words;
 }

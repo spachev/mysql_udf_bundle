@@ -16,7 +16,8 @@ In MySQL as root:
 create function earth_distance returns real soname 'libearth_distance.so';
 create function write_to_file returns int soname 'libwrite_to_file.so';
 create function hello returns string soname 'libhello.so';
-create function word_count returns int soname 'libword_count.so'
+create function word_count returns int soname 'libword_count.so';
+create aggregate function longest_word returns string soname 'liblongest_word.so';
 ```
 
 Usage:
@@ -25,6 +26,8 @@ Usage:
 earth_distance(lat1,lon1,lat2,lon2)
 write_to_file(fname,fdata);
 hello();
+word_count(body);
+longest_word(body);
 ```
 
 Usage examples:
