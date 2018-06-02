@@ -80,6 +80,11 @@ my_bool longest_word_init( UDF_INIT* initid, UDF_ARGS* args, char* message)
 
 void longest_word_deinit(UDF_INIT *initid)
 {
+	DATA_BUF* buf = (DATA_BUF*)initid->ptr;
+
+	if (buf->alloc_len)
+		free(buf->word);
+
 	free(initid->ptr);
 }
 
